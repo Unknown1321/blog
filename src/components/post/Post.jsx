@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./post.css";
 
 export default function Post({img}) {
@@ -11,19 +12,25 @@ export default function Post({img}) {
       <div className="postInfo">
         <div className="postCats">
           <span className="postCat">
-           
-              Category 1
+          <Link className="link" to="/posts?cat=Category1">
+          Category 1
+            </Link>
+              
           
           </span>
           <span className="postCat">
            
-              Category 2
+          <Link className="link" to="/posts?cat=Category2">
+          Category 2
+            </Link>
          
           </span>
         </div>
         <span className="postTitle">
-       
-            Title Of Task Done
+            <Link className="link" to="/posts?cat=Title">
+              Title Of Task Done
+            </Link>
+            
          
         </span>
         <hr />

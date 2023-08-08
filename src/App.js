@@ -12,7 +12,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 
 
@@ -30,7 +29,8 @@ function App() {
         <Route path="/login" element={user ? <Homepage /> : <Login />} />
         <Route path="/settings" element={user ? <Settings /> : <Register />} />
         <Route path="/write" element={user ? <Write /> : <Register />} />
-        <Route path="/post/:postId" element={<Single />} />
+        <Route path="/posts" element={<Single />} />
+        
       </Routes>
     </Router>
   );

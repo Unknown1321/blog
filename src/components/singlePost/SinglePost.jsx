@@ -11,7 +11,7 @@ export default function SinglePost() {
           alt=""
         />
         <h1 className="singlePostTitle">
-          Lorem ipsum dolor
+          Title of Task done
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -22,7 +22,7 @@ export default function SinglePost() {
             Author:
             <b className="singlePostAuthor">
               
-                Safak
+                User
               
             </b>
           </span>
