@@ -29,17 +29,17 @@ export default function Sidebar() {
         <ul className="sidebarList">
           <li className="sidebarListItem">
        
-              675+ Employees
+              Scrum
  
           </li>
           <li className="sidebarListItem">
            
-              6 Offices in The Netherlands, Germany, Denmark & Norway
+              Java
           
           </li>
           <li className="sidebarListItem">
           
-              90 Million Euro turnover(210)
+              Teamwork
           
           </li>
         
