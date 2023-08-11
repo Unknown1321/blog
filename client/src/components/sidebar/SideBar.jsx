@@ -13,6 +13,7 @@ export default function Sidebar() {
     };
     getCategories();
   }, []);
+  
   return (
     <div className="sidebar">
       <div className="sidebarItem">
