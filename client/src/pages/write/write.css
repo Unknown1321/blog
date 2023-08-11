@@ -48,6 +48,13 @@
   .writeInput:focus {
     outline-style: none;
   }
+
+  .writeCategories {
+    font-size: 20px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+  }
   
   .writeText {
     width: 70vw;

@@ -13,11 +13,11 @@ export default function Sidebar() {
     };
     getCategories();
   }, []);
-  
+
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
+        <span className="sidebarTitle">ABOUT US</span>
             <img
               src="https://careers.keylane.com/wp-content/uploads/2022/11/keylane-logo.png"
               alt=""

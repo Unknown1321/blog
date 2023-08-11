@@ -82,6 +82,17 @@
   font-weight: 600;
 }
 
+.singlePostCategoriesInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.singlePostCategoriesInput:focus {
+  outline: none;
+}
+
 .singlePostDescInput {
   border: none;
   color: #666;

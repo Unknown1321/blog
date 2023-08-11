@@ -6,6 +6,7 @@ import { Context } from "../../context/Context";
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [categories, setCategories] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
 
@@ -14,8 +15,10 @@ export default function Write() {
     const newPost = {
       username: user.username,
       title,
+      categories,
       desc,
     };
+
     if (file) {
       const data =new FormData();
       const filename = Date.now() + file.name;
@@ -55,6 +58,16 @@ export default function Write() {
             onChange={e=>setTitle(e.target.value)}
           />
         </div>
+
+        <div className="writeFormGroup">
+          <textarea
+            placeholder="Which categories..."
+            type="text"
+            className="writeInput writeCategories"
+            onChange={e=>setCategories(e.target.value)}
+          ></textarea>
+        </div>
+
         <div className="writeFormGroup">
           <textarea
             placeholder="Write what you task was about..."
@@ -63,6 +76,7 @@ export default function Write() {
             onChange={e=>setDesc(e.target.value)}
           ></textarea>
         </div>
+
         <button className="writeSubmit" type="submit">
           Publish
         </button>

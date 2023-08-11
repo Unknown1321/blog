@@ -7,6 +7,8 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
+import Chat from "./pages/chat/ChatA";
+import Todo from "./pages/todo/ToDoo";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
@@ -18,6 +20,8 @@ function App() {
      <TopBar/>
       <Routes>
         <Route path="/" element={<Homepage/>} />
+        <Route path="/chat" element={<Chat/>} />
+        <Route path="/todo" element={<Todo/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/register" element={user ? <Homepage /> : <Register/>} />
