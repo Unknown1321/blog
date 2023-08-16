@@ -23,6 +23,7 @@ export default function Settings() {
       email,
       password,
     };
+    
     if (file) {
       const data = new FormData();
       const filename = Date.now() + file.name;
