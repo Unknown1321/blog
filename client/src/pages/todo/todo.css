@@ -164,3 +164,13 @@
 	text-align: center;
 	cursor: pointer;
 }
+
+.Todo .error-message {
+	background-color: #ffdddd;
+	color: #ff0000;
+	padding: 10px;
+	border: 1px solid #ff0000;
+	border-radius: 4px;
+	margin-bottom: 10px;
+  }
+  

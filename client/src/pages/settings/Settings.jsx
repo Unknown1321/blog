@@ -5,14 +5,12 @@ import { Context } from "../../context/Context";
 import axios from "axios";
 
 export default function Settings() {
-  const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,17 +21,7 @@ export default function Settings() {
       email,
       password,
     };
-    
-    if (file) {
-      const data = new FormData();
-      const filename = Date.now() + file.name;
-      data.append("name", filename);
-      data.append("file", file);
-      updatedUser.profilePic = filename;
-      try {
-        await axios.post("/upload", data);
-      } catch (err) {}
-    }
+
     try {
       const res = await axios.put("/users/" + user._id, updatedUser);
       setSuccess(true);
@@ -47,25 +35,9 @@ export default function Settings() {
       <div className="settingsWrapper">
         <div className="settingsTitle">
           <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle">Delete Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
-          <label>Profile Picture</label>
-          <div className="settingsPP">
-            <img
-              src={file ? URL.createObjectURL(file) : PF + user.profilePic}
-              alt=""
-            />
-            <label htmlFor="fileInput">
-              <i className="settingsPPIcon far fa-user-circle"></i>
-            </label>
-            <input
-              type="file"
-              id="fileInput"
-              style={{ display: "none" }}
-              onChange={(e) => setFile(e.target.files[0])}
-            />
-          </div>
+          
           <label>Username</label>
           <input
             type="text"

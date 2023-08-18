@@ -20,8 +20,8 @@ function App() {
      <TopBar/>
       <Routes>
         <Route path="/" element={<Homepage/>} />
-        <Route path="/chat" element={<Chat/>} />
-        <Route path="/todo" element={<Todo/>} />
+        <Route path="/chat" element={user ? <Chat /> : <Register/>} />
+        <Route path="/todo" element={user ? <Todo /> : <Register/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/register" element={user ? <Homepage /> : <Register/>} />

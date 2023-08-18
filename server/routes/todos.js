@@ -1,6 +1,7 @@
-const router = require("express").Router();
-const Todo = require('../models/Todo');
+import { Router } from "express";
+import Todo from "../models/Todo.js";
 
+const router = Router();
 
 // CREATE TODOS
 router.post('/', async (req, res) => {
@@ -76,5 +77,5 @@ router.delete("/:id", async (req, res) => {
       res.status(500).json(err);
     }
   }); 
-
-module.exports = router;
+  
+  export default router;
